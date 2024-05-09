@@ -1,0 +1,163 @@
+<div class="loader" *ngIf="showloading">
+  <span></span>
+</div>
+
+<div class="Message">{{Message}}</div>
+
+<div class="tables" *ngIf="showtable">
+  <table>
+    <caption>School</caption>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data["First Name"]}} {{data["Last Name"]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Class</caption>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data.Class}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Assessment Areas</caption>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data["Assessment Areas"]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Student</caption>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Full Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data["First Name"]}} {{data["Last Name"]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Awards</caption>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data.award}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Answer</caption>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data.Answers}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Summary</caption>
+    <thead>
+      <tr>
+        <th>School ID</th>
+        <th>Sydney Participant</th>
+        <th>Sydney Percentile</th>
+        <th>Assessment Area ID</th>
+        <th>Award ID</th>
+        <th>Class ID</th>
+        <th>Correct Answer Percentage Per Class</th>
+        <th>Correct Answer</th>
+        <th>Student ID</th>
+        <th>Participant</th>
+        <th>Student Score</th>
+        <th>Subject ID</th>
+        <th>Category ID</th>
+        <th>Year Level Name</th>
+        <th>Answer ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data.sydney_participants}}</td>
+        <td>{{data.sydney_percentile}}</td>
+        <td>{{data.StudentID}}</td>
+        <td>{{data.StudentID}}</td>
+        <td>{{data.StudentID}}</td>
+        <td>{{data.correct_answer_percentage_per_class}}</td>
+        <td>{{data.correct_answer}}</td>
+        <td>{{data.StudentID}}</td>
+        <td>{{data.participant}}</td>
+        <td>{{data.Student_Score}}</td>
+        <td>{{data.StudentID}}</td>
+        <td>{{data.StudentID}}</td>
+        <td>{{data.Year_Level_Name}}</td>
+        <td>{{data.StudentID}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Subject</caption>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Subject</th>
+        <th>Subject Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of FullData.Data">
+        <td>{{data.StudentID}}</td>
+        <td>{{data.Subject}}</td>
+        <td>{{data.average_score}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
