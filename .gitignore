@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+/Ganison_dataset
+
 /node_modules
 /.vscode
 /.angular

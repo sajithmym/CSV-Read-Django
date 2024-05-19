@@ -2,6 +2,7 @@
   <span></span>
 </div>
 
+<div class="Message">{{File_Count}}</div>
 <div class="Message">{{Message}}</div>
 
 <div class="tables" *ngIf="showtable">
@@ -14,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data["First Name"]}} {{data["Last Name"]}}</td>
       </tr>
@@ -30,7 +31,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data.Class}}</td>
       </tr>
@@ -46,7 +47,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data["Assessment Areas"]}}</td>
       </tr>
@@ -58,11 +59,11 @@
     <thead>
       <tr>
         <th>Id</th>
-        <th>Full Name</th>
+        <th>Full_Name</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data["First Name"]}} {{data["Last Name"]}}</td>
       </tr>
@@ -78,7 +79,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data.award}}</td>
       </tr>
@@ -94,7 +95,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data.Answers}}</td>
       </tr>
@@ -105,25 +106,25 @@
     <caption>Summary</caption>
     <thead>
       <tr>
-        <th>School ID</th>
-        <th>Sydney Participant</th>
-        <th>Sydney Percentile</th>
-        <th>Assessment Area ID</th>
-        <th>Award ID</th>
-        <th>Class ID</th>
+        <th>School_ID</th>
+        <th>Sydney_Participant</th>
+        <th>Sydney_Percentile</th>
+        <th>Assessment_Area_ID</th>
+        <th>Award_ID</th>
+        <th>Class_ID</th>
         <th>Correct Answer Percentage Per Class</th>
-        <th>Correct Answer</th>
-        <th>Student ID</th>
+        <th>Correct_Answer</th>
+        <th>Student_ID</th>
         <th>Participant</th>
-        <th>Student Score</th>
-        <th>Subject ID</th>
-        <th>Category ID</th>
-        <th>Year Level Name</th>
-        <th>Answer ID</th>
+        <th>Student_Score</th>
+        <th>Subject_ID</th>
+        <th>Category_ID</th>
+        <th>Year Level_Name</th>
+        <th>Answer_ID</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data.sydney_participants}}</td>
         <td>{{data.sydney_percentile}}</td>
@@ -131,13 +132,13 @@
         <td>{{data.StudentID}}</td>
         <td>{{data.StudentID}}</td>
         <td>{{data.correct_answer_percentage_per_class}}</td>
-        <td>{{data.correct_answer}}</td>
+        <td>{{data["Correct Answers"]}}</td>
         <td>{{data.StudentID}}</td>
         <td>{{data.participant}}</td>
-        <td>{{data.Student_Score}}</td>
+        <td>{{data.student_score}}</td>
         <td>{{data.StudentID}}</td>
         <td>{{data.StudentID}}</td>
-        <td>{{data.Year_Level_Name}}</td>
+        <td>{{data["Year Level"]}}</td>
         <td>{{data.StudentID}}</td>
       </tr>
     </tbody>
@@ -149,11 +150,11 @@
       <tr>
         <th>Id</th>
         <th>Subject</th>
-        <th>Subject Score</th>
+        <th>Subject_Score</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of FullData.Data">
+      <tr *ngFor="let data of ExcelData">
         <td>{{data.StudentID}}</td>
         <td>{{data.Subject}}</td>
         <td>{{data.average_score}}</td>

@@ -18,10 +18,10 @@ class ReadExcel(View):
                 self.data = df.to_dict(orient='records')
                 self.current_file = filepath
                 if start_position == 0:
-                    response_data = self.data[:400000]
-                    return JsonResponse({'Data' : response_data, 'LastRecord': 400000})
+                    response_data = self.data[:500]
+                    return JsonResponse({'Data' : response_data, 'LastRecord': 500})
                 else:
-                    end_position = start_position + 400000
+                    end_position = start_position + 500
                     response_data = self.data[start_position:end_position]
                     return JsonResponse({'Data' : response_data, 'LastRecord': end_position})
             except Exception as e:
@@ -29,4 +29,5 @@ class ReadExcel(View):
         else:
             data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Ganison_dataset')
             filepaths = [os.path.join(data_dir, filename) for filename in os.listdir(data_dir) if filename.endswith('.csv')]
+            print(filepaths)
             return JsonResponse({'Filepaths' : filepaths})
